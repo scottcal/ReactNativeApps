@@ -1,23 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import { Header } from './src/components/common'
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
-    const {container} = styles;
 
     return (
-      <View style={container}>
+      <View>
+        <Header headerText="Authentication" />
         <Text>Open up App.js to start working on your app! 1</Text>
       </View>
     );
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};
