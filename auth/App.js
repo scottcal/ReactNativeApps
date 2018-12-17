@@ -1,8 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
 import { View } from 'react-native';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import firebase from '@firebase/app';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import '@firebase/auth';
-import { Header} from './src/components/common';
+import { Header } from './src/components/common';
+import LoginForm from './src/components/LoginForm';
 
 export default class App extends Component {
   componentWillMount() {
@@ -21,7 +25,9 @@ export default class App extends Component {
     return (
       <View>
         <Header headerText="Authentication" />
+        <LoginForm />
       </View>
     );
   }
-};
+}
+
