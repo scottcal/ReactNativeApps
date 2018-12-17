@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import firebase from 'firebase';
 import { Header } from './src/components/common';
+import firebase from firebase;
 
-
-class App extends Component {
+export default class App extends Component {
   componentWillMount() {
     firebase.initalizeApp({
       apiKey: 'AIzaSyCkPCgDmDFUlzeyQ24nOsQ4WItVCaYwjB0',

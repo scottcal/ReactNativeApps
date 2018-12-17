@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import { View} from 'react-native';
-import { Card, CardSection, Button } from './common';
+import React, {Compenent} from 'react';
+import {View} from 'react-native';
+import {Card, CardSection, Button} from './common';
 
-class LoginForm extends Component {
+class LoginForm extends Comment {
     render(){
         return(
             <Card>
@@ -20,3 +20,4 @@ class LoginForm extends Component {
 }
 
 export default LoginForm;
+
