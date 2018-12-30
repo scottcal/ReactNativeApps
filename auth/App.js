@@ -1,14 +1,16 @@
-/* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
 import { View } from 'react-native';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import firebase from '@firebase/app';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import '@firebase/auth';
-import { Header } from './src/components/common';
+import { Header, Button, Spinner, CardSection } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
+//don't remember why I added the next line
+//import { userInfo } from 'os';
 
 export default class App extends Component {
+
+  state = { loggedIn : null };
+
   componentWillMount() {
     firebase.initializeApp({
       apiKey: 'AIzaSyCkPCgDmDFUlzeyQ24nOsQ4WItVCaYwjB0',
@@ -18,6 +20,25 @@ export default class App extends Component {
       storageBucket: 'authentication-d3606.appspot.com',
       messagingSenderId: '90338599576'
     });
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState ({loggedIn : true });
+      } else {
+        this.setState ({ loggedIn : false });
+      }
+    });
+  }
+
+  renderContent() {
+    switch (this.state.loggedIn) {
+      case true:
+        return <CardSection><Button>Log Out</Button></ CardSection> ;
+      case false:
+        return <LoginForm />;
+      default:
+        return <Spinner size="large" />; 
+    }
   }
 
 
@@ -25,7 +46,7 @@ export default class App extends Component {
     return (
       <View>
         <Header headerText="Authentication" />
-        <LoginForm />
+        {this.renderContent()}
       </View>
     );
   }
