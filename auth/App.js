@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import firebase from '@firebase/app';
 import '@firebase/auth';
-import { Header, Button, Spinner, CardSection } from './src/components/common';
+import { Header, Button, Spinner, CardSection, Card } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
 //don't remember why I added the next line
 //import { userInfo } from 'os';
@@ -33,11 +33,18 @@ export default class App extends Component {
   renderContent() {
     switch (this.state.loggedIn) {
       case true:
-        return <CardSection><Button>Log Out</Button></ CardSection> ;
+        return (
+          <CardSection>
+            <Button onPress={() => firebase.auth().signOut()}>
+              Log Out
+            </Button>
+          </ CardSection> 
+          
+          );
       case false:
         return <LoginForm />;
       default:
-        return <Spinner size="large" />; 
+        return <View style={styles.SpinnerStyle}><Spinner size="large" /></View>
     }
   }
 
@@ -47,8 +54,15 @@ export default class App extends Component {
       <View>
         <Header headerText="Authentication" />
         {this.renderContent()}
+        {console.log(this.state.loggedIn)}
       </View>
     );
   }
+}
+
+const styles = {
+  SpinnerStyle: {
+    marginTop: 40,
+    }
 }
 
