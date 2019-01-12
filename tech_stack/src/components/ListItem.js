@@ -5,10 +5,12 @@ import { CardSection } from './common';
 class ListItem extends Component {
     render() {
         const { titleStyle } = styles;
+
+        const { id, title } = this.props.library;
         return(
             <CardSection>
                 <Text style = {titleStyle}>
-                    {this.props.library.title}
+                    {title}
                 </Text>
             </CardSection>
         );
