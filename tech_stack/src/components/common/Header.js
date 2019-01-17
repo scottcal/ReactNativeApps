@@ -1,4 +1,4 @@
-//Import Libraries for making a componet
+//Import Libraries for making a component
 import React from 'react';
 import { Text, View } from 'react-native';
 
@@ -24,7 +24,7 @@ const styles = {
         shadowColor: '#555',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
-        eleveation: 2,
+        elevation: 2,
         position: 'relative'
     },
     textStyle: {
@@ -32,5 +32,5 @@ const styles = {
     }
 };
 
-//Make the component avaiable to other parts of the app
+//Make the component available to other parts of the app
 export { Header };
