@@ -3,7 +3,7 @@ import '@firebase/auth';
 import { 
     EMAIL_CHANGED,
     PASSWORD_CHANGED
-} from './types';
+} from './types';   
 
 export const emailChanged = (text) => {
     return {
