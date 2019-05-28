@@ -6,6 +6,8 @@ import '@firebase/auth';
 import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers';
 import LoginForm from './src/components/LoginForm';
+import Router from './src/Router';
+
 
 export default class App extends Component {
 
@@ -27,7 +29,7 @@ export default class App extends Component {
 
     return (
       <Provider store={store}>
-        <LoginForm />
+        <Router />
       </Provider>
     );
   }

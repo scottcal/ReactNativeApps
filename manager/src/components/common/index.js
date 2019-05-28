@@ -9,3 +9,4 @@ export * from './Header';
 // eslint-disable-next-line import/no-unresolved
 export * from './Input';
 export * from './Spinner';
+export * from './PhoneNumber';
