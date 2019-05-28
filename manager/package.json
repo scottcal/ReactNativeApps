@@ -4,14 +4,17 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "flow": "flow"
   },
   "dependencies": {
     "expo": "^32.0.0",
     "firebase": "^5.8.3",
+    "flow-bin": "^0.98.1",
     "lodash": "^4.17.11",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-communications": "^2.2.1",
     "react-native-router-flux": "^4.0.6",
     "react-phone-number-input": "^2.3.12",
     "react-redux": "^6.0.0",
