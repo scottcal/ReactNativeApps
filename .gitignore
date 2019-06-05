@@ -5,3 +5,6 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+manager/.DS_Store
+manager/src/.DS_Store
+manager/src/components/.DS_Store
