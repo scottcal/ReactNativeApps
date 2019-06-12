@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import PhoneInput from 'react-phone-number-input/react-responsive-ui'
+//import PhoneInput from 'react-phone-number-input/react-responsive-ui'
 //Only css for webpack 
 //import 'react-phone-number-input/style.css'
 //import 'react-responsive-ui/style.css'
@@ -11,11 +11,11 @@ const Phone = ({ label, value, onChange, placeholder }) => {
     return (
         <View style={containerStyle}>
               <Text style={labelStyle}>{label}</Text>
-              <PhoneInput
+              {/* <PhoneInput
                     placeholder={placeholder}
                     value={value}
                     onChange={onChangeText} 
-                    />
+                    /> */}
         </View>
     );
 };
@@ -43,4 +43,4 @@ const styles = {
     }  
 };
 
-export { PhoneInput };
+export default Phone ;

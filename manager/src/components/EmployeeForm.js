@@ -3,7 +3,7 @@ import {View, Picker, Text} from 'react-native';
 import { connect } from 'react-redux';
 import {employeeUpdate} from '../actions/';
 import {CardSection,Input} from './common';
-import { formatPhoneNumber } from 'react-phone-number-input';
+// import { formatPhoneNumber } from 'react-phone-number-input';
 
 
 class EmployeeForm extends Component {
